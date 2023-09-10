@@ -1,113 +1,111 @@
-import Image from 'next/image'
+import Image from "next/image";
+import Link from "next/link";
+
+import ProfilePhoto from "../../public/ProfilePhoto.jpg";
+import HtmlIcon from "../../public/icons8-html-96.png";
+import CssIcon from "../../public/icons8-css-96.png";
+import JsIcon from "../../public/icons8-js-96.png";
+import ReactIcon from "../../public/icons8-react-native-48.png";
+import NextIcon from "../../public/icons8-nextjs-48.png";
+import PythonIcon from "../../public/icons8-python-48.png";
+import MongoIcon from "../../public/icons8-mongo.png";
+import TailWindIcon from "../../public/icons8-tailwind-css-48.png";
+
+
+import About from "./about/page";
+import Footer from "./Component/Footer";
+import Contact from "./Contact/page";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <>
+      <div className="block md:flex justify-between items-center min-h-[90vh] w-full selection:bg-[#F81CE5] selection:text-white">
+
+      <div className="p-3 md:w-[45%] h-[50%] flex justify-center items-center ">
+          <div draggable="false"> 
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src={ProfilePhoto}
+              alt="Profile Photo"
+              className="profilePic rounded-full w-[200px] h-[200px] object-cover object-center"
             />
-          </a>
+          </div>
         </div>
+
+        <div className="p-3  md:w-[45%] h-[50%] md:flex justify-center items-center">
+          <div>
+            <div className="py-2">
+              <h1 className="text-xl heroTxt">Hello 👋, I'm </h1>
+              <h1 className="text-4xl heroTxt inline-block homeHeading">
+                Arun Kumar
+              </h1>
+            </div>
+
+            <div>
+              <h1>
+                An Undergraduate Student
+                <br />
+                at 
+                <a
+                  href="http://www.ipu.ac.in/"
+                  target="_blank"
+                  className="text-blue-500 hover:bg-[#F81CE5] px-2 py-1 rounded-md hover:text-white heroTxt mx-1"
+                >
+                  IPU Usar😎
+                </a>
+              </h1>
+            </div>
+
+            <div className="py-2">
+              <p className="font-semibold">
+                I'm a Full Stack Developer and a Competitive Programmer.
+                <span className="heroTxt text-pink-500"> I love</span>
+                <br />
+                building things and learning new technologies.
+              </p>
+            </div>
+
+            <div className="flex gap-5 p-3">
+                <Link href="https://github.com/Arun-Kumar21">
+                  <i className="ri-github-fill text-3xl"></i>
+                </Link>
+
+                <Link href="">
+                  <i className="ri-linkedin-box-fill text-3xl hover:text-blue-600"></i>
+                </Link>
+            </div>
+
+            <div className="flex gap-6 p-2 items-center">
+              <div>
+                <h1 className="font-[500] text-base">Tech Skills :</h1>
+              </div>
+
+              <div className="flex gap-2 flex-wrap p-2">
+                <Image src={HtmlIcon}  alt="Html" className="w-[40px] "/>
+                <Image src={CssIcon} alt="Css" className="w-[40px] "/>
+                <Image src={JsIcon} alt="Js" className="w-[40px] "/>
+                <Image src={ReactIcon} alt="Reactjs" className="w-[40px]"/>
+                <Image src={NextIcon} alt="Nextjs" className="w-[40px]"/>
+                <Image src={PythonIcon} alt="Python" className="w-[40px]"/>
+                <Image src={MongoIcon} alt="MongoDb" className="w-[40px]"/>
+                <Image src={TailWindIcon} alt="TailWind" className="w-[40px]"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="w-full">
+        <About />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="mt-10">
+        <Contact/>
       </div>
-    </main>
-  )
+
+      <div className="mt-20">
+        <Footer/>
+      </div>
+    </>
+  );
 }
