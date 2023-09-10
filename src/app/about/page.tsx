@@ -15,9 +15,9 @@ export default function About() {
           </div>
 
           <div className="px-2">
-            <p className="font-bold">
-              My portfolio: A glimpse into the solutions I've crafted for
-              clients and beyond
+            <p className="font-extrabold">
+              My portfolio: <span className="font-bold"> A glimpse into the solutions I&apos;ve crafted for
+              clients and beyond </span>
             </p>
           </div>
         </div>

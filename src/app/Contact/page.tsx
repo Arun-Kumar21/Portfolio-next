@@ -10,7 +10,7 @@ export default function Contact() {
           </div>
 
           <div className="px-4 py-1">
-            <h1 className="font-bold">Don't be shy! Hit me up!👇</h1>
+            <h1 className="font-bold">Don&apos;t be shy! Hit me up!👇</h1>
           </div>
 
           <div className="p-5">

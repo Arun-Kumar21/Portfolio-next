@@ -34,7 +34,7 @@ export default function Home() {
         <div className="p-3  md:w-[45%] h-[50%] md:flex justify-center items-center">
           <div>
             <div className="py-2">
-              <h1 className="text-xl heroTxt">Hello 👋, I'm </h1>
+              <h1 className="text-xl heroTxt">Hello 👋, I&apos;m </h1>
               <h1 className="text-4xl heroTxt inline-block homeHeading">
                 Arun Kumar
               </h1>
@@ -57,7 +57,7 @@ export default function Home() {
 
             <div className="py-2">
               <p className="font-semibold">
-                I'm a Full Stack Developer and a Competitive Programmer.
+                I&apos;m a Full Stack Developer and a Competitive Programmer.
                 <span className="heroTxt text-pink-500"> I love</span>
                 <br />
                 building things and learning new technologies.
