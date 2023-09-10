@@ -24,11 +24,9 @@ function Navbar() {
                     <li className='hover:bg-[#F81CE5] px-3 py-1 hover:text-white rounded-md'>
                         <Link href='/about'>About</Link>
                     </li>
+                   
                     <li className='hover:bg-[#F81CE5] px-3 py-1 hover:text-white rounded-md'>
-                        <Link href='/'>Skill</Link>
-                    </li>
-                    <li className='hover:bg-[#F81CE5] px-3 py-1 hover:text-white rounded-md'>
-                        <Link href='/'>Contact</Link>
+                        <Link href='/Contact'>Contact</Link>
                     </li>
                 </ul>
             </div>
